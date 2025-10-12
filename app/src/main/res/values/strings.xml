@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Morse Code</string>
+    <string name="translator">Translator</string>
+    <string name="voice">Voice</string>
+    <string name="learn">Learn</string>
+    <string name="games">Games</string>
+    <string name="ai_chat">AI Chat</string>
+    <string name="history">History</string>
+</resources>

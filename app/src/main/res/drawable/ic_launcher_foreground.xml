@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="0.3"
+        android:scaleY="0.3"
+        android:translateX="37.8"
+        android:translateY="37.8">
+        <!-- Morse Code Symbol: Dot Dash Dot (Letter R for Radio) -->
+        <!-- First Dot -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M20,40 m-8,0 a8,8 0,1,1 16,0 a8,8 0,1,1 -16,0"/>
+        <!-- Dash -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M40,32 h24 a8,8 0,0,1 8,8 v0 a8,8 0,0,1 -8,8 h-24 a8,8 0,0,1 -8,-8 v0 a8,8 0,0,1 8,-8"/>
+        <!-- Second Dot -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M84,40 m-8,0 a8,8 0,1,1 16,0 a8,8 0,1,1 -16,0"/>
+        <!-- Signal Wave -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:fillColor="@android:color/transparent"
+            android:pathData="M10,60 Q20,50 30,60 T50,60 T70,60 T90,60"/>
+    </group>
+</vector>
