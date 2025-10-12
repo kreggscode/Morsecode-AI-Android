@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.kreggscode.morsecode"
-    compileSdk = 36
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.kreggscode.morsecode"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 34
         versionCode = 4
         versionName = "1.0"
 
@@ -23,7 +23,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
