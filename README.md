@@ -65,6 +65,32 @@ Features:
 - **Export**: Share or export history
 - **Swipe to Delete**: Easy management
 
+## 📸 Screenshots
+
+### Home Screen & Navigation
+<div align="center">
+  <img src="screenshots/Screenshot_20251012_221523.png" alt="Home Screen" width="200"/>
+  <img src="screenshots/Screenshot_20251012_221531.png" alt="Navigation Menu" width="200"/>
+</div>
+
+### Bidirectional Translator
+<div align="center">
+  <img src="screenshots/Screenshot_20251012_221536.png" alt="Text to Morse Translation" width="200"/>
+  <img src="screenshots/Screenshot_20251012_221540.png" alt="Morse Code Visualization" width="200"/>
+</div>
+
+### Audio & Flash Features
+<div align="center">
+  <img src="screenshots/Screenshot_20251012_221543.png" alt="Audio Playback Controls" width="200"/>
+  <img src="screenshots/Screenshot_20251012_221553.png" alt="Flashlight Signaling" width="200"/>
+</div>
+
+### Learning & Games
+<div align="center">
+  <img src="screenshots/Screenshot_20251012_221616.png" alt="Interactive Learning" width="200"/>
+  <img src="screenshots/Screenshot_20251012_221621.png" alt="Morse Code Games" width="200"/>
+</div>
+
 ## Technical Stack
 
 ### Architecture
