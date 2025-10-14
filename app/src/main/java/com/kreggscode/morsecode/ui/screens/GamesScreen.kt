@@ -9,6 +9,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.statusBarsPadding
@@ -37,7 +38,11 @@ fun GamesScreen(viewModel: GamesViewModel) {
             ) {
                 if (uiState.isPlaying) {
                     IconButton(onClick = { viewModel.exitGame() }) {
-                        Icon(Icons.Default.ArrowBack, "Back")
+                        Icon(
+                            Icons.Default.ArrowBack,
+                            "Back",
+                            tint = MaterialTheme.colorScheme.onBackground
+                        )
                     }
                 }
                 Text(
@@ -92,6 +97,7 @@ fun GameSelection(
         Text(
             text = "Choose a Game",
             style = MaterialTheme.typography.headlineMedium,
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(bottom = 8.dp)
         )
         
@@ -184,6 +190,7 @@ fun DifficultySelection(
         Text(
             text = "Select Difficulty",
             style = MaterialTheme.typography.headlineMedium,
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(bottom = 32.dp)
         )
         
@@ -241,7 +248,8 @@ fun GamePlay(
         ) {
             Text(
                 text = "Question ${uiState.questionNumber}/${uiState.totalQuestions}",
-                style = MaterialTheme.typography.titleMedium
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onBackground
             )
             Text(
                 text = "Score: ${uiState.score}",

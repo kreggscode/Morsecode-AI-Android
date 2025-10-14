@@ -30,7 +30,8 @@ import com.kreggscode.morsecode.viewmodel.TranslatorViewModel
 @Composable
 fun TranslatorScreen(
     viewModel: TranslatorViewModel,
-    onThemeToggle: () -> Unit = {}
+    onThemeToggle: () -> Unit = {},
+    onNavigateToSettings: () -> Unit = {}
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
@@ -49,7 +50,7 @@ fun TranslatorScreen(
                 .padding(bottom = 120.dp), // Extra space for floating nav bar
             verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
-            // Header with theme toggle
+            // Header with theme toggle and settings
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -62,20 +63,40 @@ fun TranslatorScreen(
                     color = if (isDarkTheme) Color(0xFF00E5FF) else Color(0xFF2196F3)
                 )
                 
-                IconButton(
-                    onClick = onThemeToggle,
-                    modifier = Modifier
-                        .shadow(8.dp, RoundedCornerShape(12.dp))
-                        .background(
-                            if (isDarkTheme) Color(0xFF1E2337) else Color.White,
-                            RoundedCornerShape(12.dp)
-                        )
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Icon(
-                        if (isDarkTheme) Icons.Filled.LightMode else Icons.Filled.DarkMode,
-                        "Toggle Theme",
-                        tint = if (isDarkTheme) Color(0xFF00E5FF) else Color(0xFF2196F3)
-                    )
+                    IconButton(
+                        onClick = onThemeToggle,
+                        modifier = Modifier
+                            .shadow(8.dp, RoundedCornerShape(12.dp))
+                            .background(
+                                if (isDarkTheme) Color(0xFF1E2337) else Color.White,
+                                RoundedCornerShape(12.dp)
+                            )
+                    ) {
+                        Icon(
+                            if (isDarkTheme) Icons.Filled.LightMode else Icons.Filled.DarkMode,
+                            "Toggle Theme",
+                            tint = if (isDarkTheme) Color(0xFF00E5FF) else Color(0xFF2196F3)
+                        )
+                    }
+                    
+                    IconButton(
+                        onClick = onNavigateToSettings,
+                        modifier = Modifier
+                            .shadow(8.dp, RoundedCornerShape(12.dp))
+                            .background(
+                                if (isDarkTheme) Color(0xFF1E2337) else Color.White,
+                                RoundedCornerShape(12.dp)
+                            )
+                    ) {
+                        Icon(
+                            Icons.Filled.Settings,
+                            "Settings",
+                            tint = if (isDarkTheme) Color(0xFF00E5FF) else Color(0xFF2196F3)
+                        )
+                    }
                 }
             }
             

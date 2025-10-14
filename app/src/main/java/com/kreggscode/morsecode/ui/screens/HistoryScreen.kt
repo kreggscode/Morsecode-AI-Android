@@ -11,6 +11,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.statusBarsPadding
 import com.kreggscode.morsecode.data.local.entities.TranslationEntity
@@ -50,11 +51,16 @@ fun HistoryScreen(viewModel: HistoryViewModel) {
                 ) {
                     Icon(
                         if (uiState.showFavoritesOnly) Icons.Default.Star else Icons.Default.StarBorder,
-                        "Toggle Favorites"
+                        "Toggle Favorites",
+                        tint = if (uiState.showFavoritesOnly) Color(0xFFFFD700) else Color.White
                     )
                 }
                 IconButton(onClick = { showDeleteDialog = true }) {
-                    Icon(Icons.Default.DeleteSweep, "Clear All")
+                    Icon(
+                        Icons.Default.DeleteSweep,
+                        "Clear All",
+                        tint = Color(0xFFFF5252)
+                    )
                 }
             }
         }
@@ -104,7 +110,7 @@ fun HistoryScreen(viewModel: HistoryViewModel) {
                             onFlashClick = { viewModel.flashTranslation(translation.morseCode) },
                             isPlaying = uiState.playingId == translation.id,
                             isFlashing = uiState.flashingId == translation.id,
-                            modifier = Modifier.animateItemPlacement()
+                            modifier = Modifier.animateItem()
                         )
                     }
                 }
@@ -180,16 +186,16 @@ fun TranslationCard(
                             if (translation.isFavorite) Icons.Default.Star else Icons.Default.StarBorder,
                             "Favorite",
                             tint = if (translation.isFavorite)
-                                MaterialTheme.colorScheme.primary
+                                Color(0xFFFFD700)
                             else
-                                MaterialTheme.colorScheme.onSurfaceVariant
+                                Color(0xFF9E9E9E)
                         )
                     }
                     IconButton(onClick = { showDeleteDialog = true }) {
                         Icon(
                             Icons.Default.Delete,
                             "Delete",
-                            tint = MaterialTheme.colorScheme.error
+                            tint = Color(0xFFFF5252)
                         )
                     }
                 }
@@ -294,13 +300,13 @@ fun EmptyState(showFavoritesOnly: Boolean) {
             if (showFavoritesOnly) Icons.Default.StarBorder else Icons.Default.History,
             contentDescription = null,
             modifier = Modifier.size(64.dp),
-            tint = MaterialTheme.colorScheme.onSurfaceVariant
+            tint = Color.White.copy(alpha = 0.6f)
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = if (showFavoritesOnly) "No favorites yet" else "No translations yet",
             style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            color = Color.White
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
@@ -309,7 +315,7 @@ fun EmptyState(showFavoritesOnly: Boolean) {
             else
                 "Start translating to build your history",
             style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            color = Color.White.copy(alpha = 0.8f)
         )
     }
 }

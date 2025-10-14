@@ -1,6 +1,8 @@
-OK # Morse Code - Premium Android Application
+# Morse Code Master - Premium Android Application
 
 A comprehensive, feature-rich Android application for Morse code translation, learning, and practice, built with modern Android development practices.
+
+**Version 1.1.0** - Enhanced with beautiful onboarding, comprehensive settings, and improved user experience!
 
 ## Features
 
@@ -283,10 +285,27 @@ Toggle between themes using the settings icon in the top bar.
 - AI chat requires internet connection
 - Some older devices may not support all audio features
 
+## What's New in Version 1.1.0
+
+✨ **NEW FEATURES:**
+- Beautiful onboarding experience for new users
+- Comprehensive settings screen with full customization
+- Vibration controller for haptic Morse code feedback
+- Enhanced Material Design 3 UI with smoother animations
+- Improved dark theme with stunning neon effects
+- Settings button in translator screen
+
+🔧 **IMPROVEMENTS:**
+- Optimized performance and app architecture
+- Enhanced audio quality for Morse playback
+- Better error handling and user feedback
+- Improved navigation flow with settings integration
+- More descriptive feature explanations throughout the app
+
 ## Future Enhancements
 
 - [ ] Morse code keyboard input
-- [ ] Vibration patterns for Morse output
+- [x] Vibration patterns for Morse output (Added in v1.1.0)
 - [ ] Bluetooth device support
 - [ ] Custom sound profiles
 - [ ] Social features (share scores)

@@ -9,26 +9,47 @@ import com.kreggscode.morsecode.ui.screens.*
 import com.kreggscode.morsecode.viewmodel.*
 
 sealed class Screen(val route: String) {
+    object Onboarding : Screen("onboarding")
     object Translator : Screen("translator")
     object Voice : Screen("voice")
     object Learn : Screen("learn")
     object Games : Screen("games")
     object AiChat : Screen("ai_chat")
     object History : Screen("history")
+    object Settings : Screen("settings")
+    object Encyclopedia : Screen("encyclopedia")
 }
 
 @Composable
 fun NavGraph(
     navController: NavHostController,
-    onThemeToggle: () -> Unit
+    onThemeToggle: () -> Unit,
+    isDarkTheme: Boolean
 ) {
     NavHost(
         navController = navController,
         startDestination = Screen.Translator.route
     ) {
+        composable(Screen.Onboarding.route) {
+            OnboardingScreen(
+                onFinish = {
+                    navController.navigate(Screen.Translator.route) {
+                        popUpTo(Screen.Onboarding.route) { inclusive = true }
+                    }
+                }
+            )
+        }
+        
         composable(Screen.Translator.route) {
             val viewModel: TranslatorViewModel = viewModel()
-            TranslatorScreen(viewModel = viewModel, onThemeToggle = onThemeToggle)
+            TranslatorScreenRevamped(
+                viewModel = viewModel,
+                onThemeToggle = onThemeToggle,
+                onNavigateToSettings = {
+                    navController.navigate(Screen.Settings.route)
+                },
+                isDarkTheme = isDarkTheme
+            )
         }
         
         composable(Screen.Voice.route) {
@@ -54,6 +75,21 @@ fun NavGraph(
         composable(Screen.History.route) {
             val viewModel: HistoryViewModel = viewModel()
             HistoryScreen(viewModel = viewModel)
+        }
+        
+        composable(Screen.Settings.route) {
+            SettingsScreen(
+                isDarkTheme = isDarkTheme,
+                onThemeToggle = onThemeToggle,
+                onBack = { navController.popBackStack() }
+            )
+        }
+        
+        composable(Screen.Encyclopedia.route) {
+            EncyclopediaScreen(
+                isDarkTheme = isDarkTheme,
+                onBack = { navController.popBackStack() }
+            )
         }
     }
 }

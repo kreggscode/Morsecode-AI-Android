@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Master - Icon Generator (512x512)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A0E27 0%, #1A1F3A 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00D9FF, #0099FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        #iconCanvas {
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
+            margin: 30px auto;
+            display: block;
+            background: white;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #00D9FF, #0099FF);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 217, 255, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 217, 255, 0.6);
+        }
+
+        .regenerate-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .regenerate-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info h3 {
+            color: #00D9FF;
+            margin-bottom: 10px;
+        }
+
+        .info ul {
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .info li {
+            padding: 5px 0;
+            opacity: 0.9;
+        }
+
+        .info li:before {
+            content: "✓ ";
+            color: #00D9FF;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .preview-text {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔊 Morse Code Master</h1>
+        <p>Professional App Icon Generator - 512x512px</p>
+
+        <canvas id="iconCanvas" width="512" height="512"></canvas>
+        
+        <p class="preview-text">Click "Download Icon" to save as PNG (512x512)</p>
+
+        <div class="controls">
+            <button class="download-btn" onclick="downloadIcon()">
+                📥 Download Icon (512x512)
+            </button>
+            <button class="regenerate-btn" onclick="generateIcon()">
+                🔄 Regenerate
+            </button>
+        </div>
+
+        <div class="info">
+            <h3>✨ Icon Features</h3>
+            <ul>
+                <li>Perfect 512x512 resolution for Google Play Store</li>
+                <li>Modern gradient background with glassmorphism</li>
+                <li>Morse code dots and dashes design</li>
+                <li>Professional and eye-catching</li>
+                <li>Matches your app's theme perfectly</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function generateIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const ctx = canvas.getContext('2d');
+            const size = 512;
+
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+
+            // Uniform background - solid dark blue
+            ctx.fillStyle = '#0D1B2A';
+            ctx.fillRect(0, 0, size, size);
+
+            // Glassmorphism circle background
+            const centerX = size / 2;
+            const centerY = size / 2;
+            
+            // Outer glow
+            const glowGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 220);
+            glowGradient.addColorStop(0, 'rgba(0, 217, 255, 0.3)');
+            glowGradient.addColorStop(0.5, 'rgba(0, 153, 255, 0.2)');
+            glowGradient.addColorStop(1, 'rgba(0, 153, 255, 0)');
+            ctx.fillStyle = glowGradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 220, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Main glass circle
+            const circleGradient = ctx.createRadialGradient(centerX, centerY - 50, 0, centerX, centerY, 180);
+            circleGradient.addColorStop(0, 'rgba(255, 255, 255, 0.15)');
+            circleGradient.addColorStop(1, 'rgba(255, 255, 255, 0.05)');
+            ctx.fillStyle = circleGradient;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 180, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Circle border with gradient
+            const borderGradient = ctx.createLinearGradient(0, 0, size, size);
+            borderGradient.addColorStop(0, '#00D9FF');
+            borderGradient.addColorStop(0.5, '#0099FF');
+            borderGradient.addColorStop(1, '#00D9FF');
+            ctx.strokeStyle = borderGradient;
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, 180, 0, Math.PI * 2);
+            ctx.stroke();
+
+            // Draw Morse code pattern "SOS" (... --- ...) - CENTERED
+            ctx.fillStyle = '#00D9FF';
+            ctx.shadowColor = '#00D9FF';
+            ctx.shadowBlur = 20;
+
+            // Centered morse code pattern
+            const dotRadius = 14;
+            const dashWidth = 45;
+            const dashHeight = 28;
+            const verticalSpacing = 50;
+
+            // Top row - "S" (three dots) - centered
+            const topY = centerY - verticalSpacing;
+            for (let i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.arc(centerX - 45 + i * 45, topY, dotRadius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Middle row - "O" (three dashes) - centered
+            const middleY = centerY;
+            for (let i = 0; i < 3; i++) {
+                ctx.fillRect(centerX - 90 + i * 60, middleY - dashHeight/2, dashWidth, dashHeight);
+            }
+
+            // Bottom row - "S" (three dots) - centered
+            const bottomY = centerY + verticalSpacing;
+            for (let i = 0; i < 3; i++) {
+                ctx.beginPath();
+                ctx.arc(centerX - 45 + i * 45, bottomY, dotRadius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Reset shadow
+            ctx.shadowBlur = 0;
+
+            // Add subtle shine effect
+            const shineGradient = ctx.createLinearGradient(0, 0, size, size/2);
+            shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.1)');
+            shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = shineGradient;
+            ctx.fillRect(0, 0, size, size/2);
+
+            console.log('Icon generated successfully!');
+        }
+
+        function downloadIcon() {
+            const canvas = document.getElementById('iconCanvas');
+            const link = document.createElement('a');
+            link.download = 'morse-code-master-icon-512x512.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            // Show success message
+            alert('✅ Icon downloaded successfully!\n\nFile: morse-code-master-icon-512x512.png\nSize: 512x512px\n\nReady for Google Play Store upload!');
+        }
+
+        // Generate icon on page load
+        window.onload = generateIcon;
+    </script>
+</body>
+</html>

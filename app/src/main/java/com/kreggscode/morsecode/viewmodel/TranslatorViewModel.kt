@@ -91,6 +91,21 @@ class TranslatorViewModel(application: Application) : AndroidViewModel(applicati
         )
     }
     
+    fun stopPlayback() {
+        stopMorseAudio()
+    }
+    
+    fun stopFlashlight() {
+        stopFlashing()
+    }
+    
+    fun translateMorseToText(morse: String) {
+        _uiState.value = _uiState.value.copy(
+            textInput = morse,
+            morseOutput = translator.morseToText(morse)
+        )
+    }
+    
     fun flashMorse() {
         val morse = _uiState.value.morseOutput.ifEmpty { _uiState.value.morseInput }
         if (morse.isEmpty()) return
