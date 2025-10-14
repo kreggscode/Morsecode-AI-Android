@@ -214,7 +214,134 @@
             transform: translateY(-3px);
         }
 
-        /* Features Section */
+        /* Technologies Section */
+        .technologies {
+            padding: 8rem 5%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .technologies::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.2"/><circle cx="90" cy="40" r="0.5" fill="%23ffffff" opacity="0.2"/><circle cx="10" cy="80" r="0.5" fill="%23ffffff" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+
+        .tech-card:hover::before {
+            opacity: 1;
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-icon.kotlin {
+            background: linear-gradient(135deg, #7F52FF, #A855F7);
+        }
+
+        .tech-icon.compose {
+            background: linear-gradient(135deg, #00E5FF, #2196F3);
+        }
+
+        .tech-icon.material {
+            background: linear-gradient(135deg, #FF6B6B, #EE5A24);
+        }
+
+        .tech-icon.room {
+            background: linear-gradient(135deg, #4ECDC4, #26A69A);
+        }
+
+        .tech-icon.coroutines {
+            background: linear-gradient(135deg, #FFD93D, #FFB347);
+        }
+
+        .tech-icon.retrofit {
+            background: linear-gradient(135deg, #A8E6CF, #52B788);
+        }
+
+        .tech-icon.ai {
+            background: linear-gradient(135deg, #FF9A8B, #FF6B6B);
+        }
+
+        .tech-icon.audio {
+            background: linear-gradient(135deg, #667EEA, #764BA2);
+        }
+
+        .tech-card h3 {
+            color: #1a1f3a;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-card p {
+            color: rgba(26, 31, 58, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
         .features {
             padding: 8rem 5%;
             background: rgba(26, 31, 58, 0.5);
@@ -468,6 +595,7 @@
     <header>
         <div class="logo">Morse Code Master</div>
         <nav>
+            <a href="#technologies">Technologies</a>
             <a href="#features">Features</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#download">Download</a>
@@ -487,6 +615,55 @@
                 <a href="#features" class="btn btn-secondary">
                     <span>✨</span> Explore Features
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <h2 class="section-title">Built with Modern Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon kotlin">K</div>
+                    <h3>Kotlin</h3>
+                    <p>Modern Android development language</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon compose">🎨</div>
+                    <h3>Jetpack Compose</h3>
+                    <p>Declarative UI framework</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon material">🎯</div>
+                    <h3>Material Design 3</h3>
+                    <p>Latest design system</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon room">💾</div>
+                    <h3>Room Database</h3>
+                    <p>Local data persistence</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon coroutines">⚡</div>
+                    <h3>Coroutines</h3>
+                    <p>Asynchronous programming</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon retrofit">🌐</div>
+                    <h3>Retrofit</h3>
+                    <p>REST API client</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon ai">🤖</div>
+                    <h3>AI Integration</h3>
+                    <p>Pollinations AI API</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon audio">🔊</div>
+                    <h3>AudioTrack</h3>
+                    <p>Custom audio synthesis</p>
+                </div>
             </div>
         </div>
     </section>
@@ -608,10 +785,13 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
+                    <li><a href="#technologies">Technologies</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#screenshots">Screenshots</a></li>
                     <li><a href="#download">Download</a></li>
                     <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="https://kreggscode.github.io/Morsecode-AI-Android/" target="_blank">Website 🌐</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.kreggscode.morsecode" target="_blank">Google Play 📱</a></li>
                 </ul>
             </div>
 
