@@ -1,14 +1,113 @@
-# Morse Code Master - Premium Android Application
+# 🎯 Morse Code Master - Premium Android Application
 
-A comprehensive, feature-rich Android application for Morse code translation, learning, and practice, built with modern Android development practices.
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg" alt="Version"/>
+  <img src="https://img.shields.io/badge/Android-8.0+-green.svg" alt="Android"/>
+  <img src="https://img.shields.io/badge/Kotlin-1.9+-purple.svg" alt="Kotlin"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License"/>
+</p>
 
-**Version 1.1.0** - Enhanced with beautiful onboarding, comprehensive settings, and improved user experience!
+<p align="center">
+  <img src="docs/screenshots/Screenshot_20251014_172145.png" alt="Morse Code Master" width="300"/>
+</p>
 
-## 🌐 **Privacy Policy**
+<h1 align="center">⚡ Master Morse Code with AI-Powered Learning ⚡</h1>
 
-📋 **[View Full Privacy Policy](https://kreggscode.github.io/Morsecode-AI-Android/privacy.html)**
+<p align="center">
+  <strong>A comprehensive, feature-rich Android application for Morse code translation, learning, and practice, built with modern Android development practices.</strong>
+</p>
 
-We are committed to protecting your privacy. Our privacy policy explains how we collect, use, and safeguard your data.
+---
+
+## 🚀 **DOWNLOAD NOW**
+
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.kreggscode.morsecode">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" height="80"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://kreggscode.github.io/Morsecode-AI-Android/">
+    <img src="https://img.shields.io/badge/🌐_Website-Visit%20Now-blue?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"/>
+  </a>
+  <a href="https://kreggscode.github.io/Morsecode-AI-Android/privacy.html">
+    <img src="https://img.shields.io/badge/🔒_Privacy_Policy-View%20Here-green?style=for-the-badge&logo=lock&logoColor=white" alt="Privacy Policy"/>
+  </a>
+</p>
+
+---
+
+## 🛠️ **Built with Modern Technologies**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=android&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Material_Design_3-6750A4?style=for-the-badge&logo=materialdesign&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Room-4CAF50?style=for-the-badge&logo=sqlite&logoColor=white"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Coroutines-FFD700?style=for-the-badge&logo=kotlin&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Retrofit-48B983?style=for-the-badge&logo=square&logoColor=white"/>
+  <img src="https://img.shields.io/badge/AI_Integration-FF6B6B?style=for-the-badge&logo=openai&logoColor=white"/>
+  <img src="https://img.shields.io/badge/AudioTrack-9C27B0?style=for-the-badge&logo=android&logoColor=white"/>
+</p>
+
+---
+
+## ✨ **Key Features**
+
+### 🔤 **Advanced Translator**
+- **Bidirectional Translation**: Convert text ↔ Morse code instantly
+- **Visual Morse Display**: Animated dots and dashes with pulsing effects
+- **Audio Playback**: Hear Morse code with adjustable speed (0.5x - 2.0x)
+- **Flashlight Signaling**: Flash Morse code using device LED
+- **Multiple Encryption Methods**:
+  - 🔐 Caesar Cipher
+  - 🔄 Reverse Encryption
+  - 🔑 Custom Key Encryption
+  - ⚡ Combined Methods
+- **💾 Save & Share**: Store translations in history and share with others
+
+### 🎤 **Voice Recognition**
+- **Speech-to-Text**: Convert spoken words to Morse code
+- **Real-time Audio Visualization**: Live audio level indicators
+- **Instant Results**: See text as you speak
+- **Auto-save**: Automatic history storage
+
+### 📚 **Interactive Learning**
+- **Complete Alphabet**: A-Z, 0-9, punctuation & special characters
+- **Audio Examples**: Tap any character to hear its Morse code
+- **Progress Tracking**: Monitor learning achievements
+- **Quiz System**: Test knowledge with interactive challenges
+- **Achievement Badges**: Track learned characters and scores
+
+### 🎮 **Engaging Games**
+Four exciting game modes for mastering Morse code:
+
+1. **🎧 Morse Decoder**: Listen and identify characters
+2. **⚡ Speed Challenge**: Translate under time pressure
+3. **🧠 Memory Match**: Match patterns and letters
+4. **🚨 SOS Rescue**: Decode emergency messages
+
+### 🤖 **AI Assistant**
+- **Expert AI**: Powered by Pollinations AI (OpenAI-compatible)
+- **Morse Code Specialist**: Deep knowledge of history and applications
+- **Contextual Chat**: Remembers conversation history
+- **Free Access**: No API key required
+
+### 🎨 **Beautiful Design**
+- **Material Design 3**: Latest Android design system
+- **Dark/Light Themes**: Automatic theme switching
+- **Smooth Animations**: Fluid transitions and effects
+- **Customizable UI**: Adjust colors and preferences
+
+### 📱 **Advanced Features**
+- **Offline Functionality**: Core features work without internet
+- **Local Database**: Room persistence for all data
+- **Background Processing**: Efficient coroutines implementation
+- **Accessibility**: Screen reader support and large text options
 
 ## Features
 
