@@ -4,6 +4,12 @@ A comprehensive, feature-rich Android application for Morse code translation, le
 
 **Version 1.1.0** - Enhanced with beautiful onboarding, comprehensive settings, and improved user experience!
 
+## 🌐 **Privacy Policy**
+
+📋 **[View Full Privacy Policy](https://kreggscode.github.io/Morsecode-AI-Android/privacy.html)**
+
+We are committed to protecting your privacy. Our privacy policy explains how we collect, use, and safeguard your data.
+
 ## Features
 
 ### 🔤 Translator
