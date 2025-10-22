@@ -67,3 +67,9 @@ GITHUB_AUTH_TEST.md
 # Icon generators (internal use only)
 icon-generator.html
 icon_generator.html
+
+# Additional files not to push
+ENHANCED_TITLE_SECTION.html
+GOOGLE_SITES_PRIVACY_POLICY.html
+PLAY_STORE_LISTING.md
+UNIVERSAL_PRIVACY_POLICY.md
