@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kreggscode.morsecode.ui.components.MorseVisualizer
@@ -128,23 +129,27 @@ fun TranslatorScreenRevamped(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp),
-                    horizontalArrangement = Arrangement.SpaceEvenly
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    ModeButton(
-                        text = "Text → Morse",
-                        icon = Icons.Default.TextFields,
-                        isSelected = translationMode,
-                        onClick = { translationMode = true },
-                        isDarkTheme = isDarkTheme
-                    )
+                    Box(modifier = Modifier.weight(1f)) {
+                        ModeButton(
+                            text = "Text → Morse",
+                            icon = Icons.Default.TextFields,
+                            isSelected = translationMode,
+                            onClick = { translationMode = true },
+                            isDarkTheme = isDarkTheme
+                        )
+                    }
                     
-                    ModeButton(
-                        text = "Morse → Text",
-                        icon = Icons.Default.GraphicEq,
-                        isSelected = !translationMode,
-                        onClick = { translationMode = false },
-                        isDarkTheme = isDarkTheme
-                    )
+                    Box(modifier = Modifier.weight(1f)) {
+                        ModeButton(
+                            text = "Morse → Text",
+                            icon = Icons.Default.GraphicEq,
+                            isSelected = !translationMode,
+                            onClick = { translationMode = false },
+                            isDarkTheme = isDarkTheme
+                        )
+                    }
                 }
             }
             

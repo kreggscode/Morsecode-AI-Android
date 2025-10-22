@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="frameGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#8B5CF6"/>
+            <stop offset="100%" stop-color="#5A3FC0"/>
+        </linearGradient>
+        <linearGradient id="badgeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.8)"/>
+            <stop offset="100%" stop-color="rgba(224,231,255,0.45)"/>
+        </linearGradient>
+        <radialGradient id="centerGlow" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+            <stop offset="100%" stop-color="rgba(255,255,255,0.1)"/>
+        </radialGradient>
+    </defs>
+
+    <rect x="24" y="24" width="464" height="464" rx="128" fill="url(#frameGradient)" stroke="rgba(255,255,255,0.35)" stroke-width="8"/>
+
+    <circle cx="256" cy="256" r="200" fill="url(#centerGlow)" stroke="rgba(255,255,255,0.4)" stroke-width="6"/>
+
+    <text x="256" y="224" text-anchor="middle" dominant-baseline="middle" font-family="Poppins, 'Segoe UI', sans-serif" font-size="76" font-weight="600" fill="url(#badgeGlow)" letter-spacing="10">MORSE</text>
+    <text x="256" y="320" text-anchor="middle" dominant-baseline="middle" font-family="Poppins, 'Segoe UI', sans-serif" font-size="106" font-weight="700" fill="url(#badgeGlow)">AI</text>
+
+    <circle cx="208" cy="394" r="22" fill="rgba(255,255,255,0.88)"/>
+    <rect x="242" y="384" width="28" height="20" rx="10" fill="rgba(255,255,255,0.82)"/>
+    <circle cx="304" cy="394" r="20" fill="rgba(255,255,255,0.75)"/>
+</svg>

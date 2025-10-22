@@ -221,6 +221,7 @@ data class BottomNavItem(
 
 val bottomNavItems = listOf(
     BottomNavItem(Screen.Translator.route, Icons.Default.Translate, "Translator"),
+    BottomNavItem(Screen.Voice.route, Icons.Default.Mic, "Voice"),
     BottomNavItem(Screen.Encyclopedia.route, Icons.Default.MenuBook, "Guide"),
     BottomNavItem(Screen.Learn.route, Icons.Default.School, "Learn"),
     BottomNavItem(Screen.Games.route, Icons.Default.Games, "Games"),
